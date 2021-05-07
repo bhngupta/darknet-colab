@@ -1,5 +1,4 @@
-# Custom Darknet for training YOLOv4 on Google Colab with custom dataset
-
+# Custom Darknet for training YOLO on Google Colab
 
 
 ## Setup darknet environment in Colab Notebook
@@ -9,7 +8,7 @@ To enable GPU backend for your notebook: __Runtime->Change runtime type->Hardwar
 ```
 # run these command line from notebook cell
 
-!git clone https://github.com/quangnhat185/darknet_for_colab.git
+!git clone https://github.com/Bhanu-mbvg/darknet_for_colab.git
 %cd darknet_for_colab
 !make
 !chmod +x ./darknet
@@ -66,12 +65,6 @@ More details about the meaning of each parameter can be found [here](https://git
     ```
     !python darknet_video.py -v {video path} -c cfg/yolov4_custom_test.cfg -w {weights_path}  -o output.mp4
     ```
-
-    
-## Tutorial
-[YOLOv4 in Google Colab: Train your Custom Dataset (Traffic Signs) with ease](https://medium.com/@quangnhatnguyenle/yolov4-in-google-colab-train-your-custom-dataset-traffic-signs-with-ease-3243ca91c81d)
-
-<p align="center"><img src="./results/yolov4_traffic_sign_detection.jpg" width=640></img></p>
                                                                        
 ## License
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
