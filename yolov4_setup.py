@@ -15,19 +15,19 @@ VARIABLE_LIST = [classes, max_batches, batch, subdivisions, width,
                  height, channels, momentum, decay, learning_rate,
                  steps,scales, filters]
 
-DICT_ORIGIN = {"classes":80, 
-               "max_batches":8000,
+DICT_ORIGIN = {"classes":2, 
+               "max_batches":6000,
                "batch":64,
                "subdivisions":16,
-               "width":608,
-               "height":608,
+               "width":416,
+               "height":416,
                "channels":3,
                "momentum":0.949,
                "decay":0.0005,
                "learning_rate":0.001,
-               "steps": (6400,7200),
+               "steps": (4800,5400),
                "scales":(.1,.1),
-               "filters":255}
+               "filters":21}
 
 def removefile(path):
     if os.path.isfile(path):
@@ -76,9 +76,9 @@ def generate_custom_test(CFG_ORIGIN_PATH, CFG_FOLDER_PATH, CFG_TEST_FILE):
     print("[INFO] Generating {} successfully...".format(CFG_TEST_FILE))      
         
 if __name__=="__main__" :
-    CFG_ORIGIN_PATH='./cfg/origin/'
+    CFG_ORIGIN_PATH='cfg/origin/'
     CFG_TRAIN_FILE='yolov4_custom_train.cfg'
-    CFG_FOLDER_PATH='./cfg/'
+    CFG_FOLDER_PATH='cfg/'
     CFG_TEST_FILE='yolov4_custom_test.cfg'
     
     removefile(CFG_FOLDER_PATH + CFG_TRAIN_FILE)
